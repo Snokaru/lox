@@ -1,4 +1,4 @@
-package com.craftinginterpreters.tool;
+package com.craftinginterpreters.tools;
 
 import java.io.IOException;
 import java.io.PrintWriter;
