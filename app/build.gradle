@@ -25,5 +25,5 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'com.craftinginterpreters.lox.AstPrinter'
+    mainClass = 'com.craftinginterpreters.lox.Lox'
 }
