@@ -53,11 +53,12 @@ public class Lox {
         Scanner scanner = new Scanner(source);
         List<Token> tokens = scanner.scanTokens();
         Parser parser = new Parser(tokens);
-        Expr expression = parser.parse();
+        List<Stmt> statements = parser.parse();
 
         if (hadError) return;
 
-        interpreter.interpret(expression);
+        interpreter.interpret(statements);
+
     }
 
     static void error(int line, String message) {
@@ -66,7 +67,7 @@ public class Lox {
 
     static void error(Token token, String message) {
         if (token.type == TokenType.EOF) {
-            report(token.line, "at end", message);
+            report(token.line, " at end", message);
         } else {
             report(token.line, " at '" + token.lexeme + "'", message);
         }

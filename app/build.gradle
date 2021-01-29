@@ -27,3 +27,7 @@ application {
     // Define the main class for the application.
     mainClass = 'com.craftinginterpreters.lox.Lox'
 }
+
+run {
+    standardInput = System.in
+}
